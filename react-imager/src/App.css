@@ -187,3 +187,76 @@ body::after {
     transform: none;
   }
 }
+
+
+.btn {
+  font-family: 'Kanit', sans-serif;
+  font-size: 1rem;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.btn-cyberpunk {
+  background: transparent;
+  color: #1af0dc;
+  border: 2px solid #ff00e1;
+  text-shadow: 0 0 3px #1af0dc, 0 0 8px #ff00e1;
+  animation: glitch-text 3s infinite;
+}
+
+.btn-cyberpunk:hover {
+  background: rgba(26,240,220,0.15);
+  box-shadow: 0 0 15px #1af0dc, 0 0 25px #ff00e1 inset;
+}
+
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255,255,255,0.6);
+  box-shadow: 0 0 20px rgba(26,240,220,0.5);
+}
+
+
+.btn-neon {
+  background: linear-gradient(90deg, #ff00e1, #1af0dc, #ff00e1);
+  background-size: 200% auto;
+  color: #0d0d0d;
+  font-weight: bold;
+  border: none;
+  animation: neon-shift 3s linear infinite;
+  box-shadow: 0 0 12px #ff00e1, 0 0 25px #1af0dc;
+}
+
+.btn-neon:hover {
+  color: #fff;
+  box-shadow: 0 0 25px #ff00e1, 0 0 40px #1af0dc;
+}
+
+
+@keyframes neon-shift {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+@keyframes glitch-text {
+  0% { transform: skew(0deg); }
+  20% { transform: skew(-5deg); }
+  40% { transform: skew(5deg); }
+  60% { transform: skew(-3deg); }
+  80% { transform: skew(3deg); }
+  100% { transform: skew(0deg); }
+}

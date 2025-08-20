@@ -42,11 +42,11 @@ export default function Imager() {
         <div style={{ textAlign: "center" }}>
             <Display src={images[currentIndex]} />
             <div style={{ margin: "20px" }}>
-                <button onClick={goBackward}>Back</button>
-                <button onClick={showRandom} style={{ margin: "0 10px" }}>
+                <button onClick={goBackward} class="btn btn-cyberpunk">Back</button>
+                <button onClick={showRandom} style={{ margin: "0 10px" }} class="btn btn-neon">
                     Random
                 </button>
-                <button onClick={goForward}>Next</button>
+                <button onClick={goForward} class="btn btn-glass">Next</button>
             </div>
             <Thumbnail
                 images={images}
